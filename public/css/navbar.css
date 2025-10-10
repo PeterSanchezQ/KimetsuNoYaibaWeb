@@ -1,0 +1,36 @@
+nav{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    align-items: center;
+    background: linear-gradient(60deg, rgb(64, 7, 8) 0%, rgb(0, 0, 0), rgb(52, 3, 28), rgb(145, 18, 18), rgb(52, 3, 28), rgb(157, 5, 5) 100%);
+    padding: 1rem;
+}
+
+.imag{
+    margin-right: auto;
+    margin-left: 2rem;
+}
+.enlaces{
+    display:flex;
+    justify-content: space-between;
+    margin:5px 4rem;
+}
+nav img{
+    width: 5rem;
+    height: 5rem;
+    border-radius:5rem;
+
+}
+.enlaces a{
+    text-decoration: none;
+    background-color: transparent;
+    color:white;
+    font-size: large;
+}
+nav a:hover{
+    transition: 0.3s ease;
+    font-size: larger;
+    background: rgba(214, 116, 190, 0.411);
+    box-shadow: 0 0 10px 10px  rgba(210, 110, 193, 0.472);
+}

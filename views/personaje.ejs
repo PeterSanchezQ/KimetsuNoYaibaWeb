@@ -1,0 +1,15 @@
+<div class="char text-center mt-4">
+    <% if (personaje) { %>
+        <h2>
+            <%= personaje.name %>
+        </h2>
+        <img src="<%= personaje.img %>" alt="<%= personaje.name %>" class="img-fluid">
+        <% } else if (error) { %>
+            <h3>
+                <%= error %>
+            </h3>
+            <img src="/img/notfound.png" alt="No encontrado" class="img-fluid mt-2">
+            <% } else { %>
+                <p>Busca un personaje para mostrar aquí.</p>
+                <% } %>
+</div>

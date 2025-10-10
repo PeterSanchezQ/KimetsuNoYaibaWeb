@@ -1,0 +1,159 @@
+/* ======== Fuente y colores base ======== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --color-bg: linear-gradient(160deg, #c65a5a, #b52525, #361313);
+  --color-acordeon: linear-gradient(240deg, #c65a5a, #b52525, #6a2222);
+  --color-acOpen: linear-gradient(240deg, #ee8989, #e63e3e, #9a2222);
+  --color-bgList: rgb(246, 230, 232);
+  --color-primary: #c62828;
+  --color-accent: #933f4c;
+  --color-muted: #aaa;
+  --color-texto: #ffffff;
+}
+
+body,
+html {
+  font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  background: var(--color-bg);
+  color: var(--color-texto);
+}
+
+/* ======== Espaciado general ======== */
+.section-space {
+  padding: 4rem 1rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ======== Sinopsis ======== */
+#sinopsis p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+/* ======== Tarjetas e imágenes ======== */
+#personajes .card.h-100 {
+  background: var(--color-bgList);
+  border: 2px solid rgb(56, 7, 7);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#personajes .card.h-100:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(255, 64, 64, 0.2);
+  border-radius: 12px;
+  border: 2px solid rgb(50, 1, 7);
+}
+
+/* ======== Imágenes ======== */
+.card-img-placeholder {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* .card:hover .card-img-placeholder {
+  transform: scale(1.01);
+} */
+
+/* ======== Texto dentro de las tarjetas ======== */
+.card-body {
+  text-align: center;
+  padding: 1.2rem;
+}
+
+.card-title {
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* ======== Listas ======== */
+.section-space li {
+  background: var(--color-bgList);
+  border: 2px solid #430404;
+}
+
+.list-group-item strong {
+  color: var(--color-accent);
+}
+
+/* ======== Acordeón (Arcos principales) ======== */
+
+.accordion-item button {
+  background: var(--color-acordeon);
+  color: var(--color-texto);
+  border: 2px solid #430404;
+}
+
+.accordion-item button:not(.collapsed) {
+  background: var(--color-acOpen);
+  color: #fff;
+  font-weight: bold;
+}
+
+.accordion-item {
+  margin-bottom: 0.5rem;
+}
+
+.accordion-body {
+  background: var(--color-bgList);
+  border-left: 5px solid #430404;
+
+}
+
+/* ======== Conceptos clave ======== */
+.arc-title {
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#conceptos .card {
+  border-left: 5px solid #430404;
+  transition: all 0.3s ease;
+}
+
+#conceptos .card:hover {
+  border-left: 4px solid var(--color-accent);
+}
+
+/* ======== Conclusión ======== */
+#conclusion p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#conclusion code {
+  color: var(--color-accent);
+}
+
+/* ======== Adaptabilidad ======== */
+@media (max-width: 768px) {
+  .card-img-placeholder {
+    height: 220px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,103 @@
+:root {
+    --fondoImagenes: linear-gradient(0deg, rgb(69, 65, 10), rgb(80, 94, 11), rgb(134, 201, 58), rgb(219, 224, 198), rgb(62, 118, 9));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body{
+    background-color: black;
+}
+nav {
+    margin-bottom: 2rem;
+}
+
+/* ====== TARJETA PRINCIPAL ====== */
+.tarjeta {
+    min-width: 60vh;
+    max-width: 800px;
+    background: var(--fondoImagenes);
+    border-radius: 1rem;
+    border: 5px solid rgb(90, 48, 48);
+    padding: 1.5rem;
+    box-shadow: 5px 5px 15px 10px rgba(58, 55, 55, 0.6);
+    object-fit: contain;
+}
+
+/* ====== CONTENEDOR DE IMAGEN ====== */
+.carousel-item {
+    transition: transform 1.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 1.3s ease-in-out !important;
+}
+
+
+.ImgChar {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* Cuadrado adaptable */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: rgba(78, 59, 115, 0.4);
+    box-shadow: 0 0 10px 5px rgba(220, 215, 215, 0.6);
+    padding: 2rem;
+}
+
+/* ====== IMAGEN ====== */
+.ImgChar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Mantiene proporción */
+    object-position: center;
+}
+
+/* ====== DATOS DEL PERSONAJE ====== */
+.datos {
+    background-color: rgba(20, 5, 5, 0.9);
+    border-radius: 0.5rem;
+    border: 5px solid rgba(128, 37, 54, 0.734);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datos h5 {
+    color: white;
+    font-size: 2.5vh;
+    text-align: center;
+    text-shadow: 2px 2px rgb(46, 41, 41);
+}
+
+/* ====== BOTONES DE CARRUSEL ====== */
+.btnPrev,
+.btnNxt {
+    width: 3rem;
+}
+
+/* ========= BOTONES PAGINACION ==============*/
+
+.control{
+    width: 60vh;
+    display:flex;
+    padding: 1rem;
+    margin: auto;
+    gap: 1rem;
+}
+.control a{
+    width: 100%;
+    font-weight: bold;
+}
