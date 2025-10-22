@@ -1,15 +1,44 @@
 <div class="char text-center mt-4">
-    <% if (personaje) { %>
-        <h2>
-            <%= personaje.name %>
-        </h2>
-        <img src="<%= personaje.img %>" alt="<%= personaje.name %>" class="img-fluid">
-        <% } else if (error) { %>
-            <h3>
-                <%= error %>
-            </h3>
-            <img src="/img/notfound.png" alt="No encontrado" class="img-fluid mt-2">
-            <% } else { %>
-                <p>Busca un personaje para mostrar aquí.</p>
-                <% } %>
+    <div class="card">
+        <% if (personaje) { %>
+
+            <div class="card-front error-state">
+                <h2>
+                    <%= personaje.name %>
+                </h2>
+                <img id="imagen" src="<%= personaje.img %>" alt="<%= personaje.name %>" class="img-fluid">
+            </div>
+
+            <div class="card-back">
+                <div class="Cinfo">
+                    <p id="info">
+                        Nombre: <%= personaje.name %><br>
+                            Edad: <%= personaje.age %> años <br>
+                                Género: <%= personaje.gender %><br>
+                                    Raza: <%= personaje.race %><br>
+                                        Descripción: <%= personaje.description %>
+                    </p>
+                </div>
+            </div>
+
+            <% } else if (error) { %>
+                <div class="card-front">
+                    <h2>
+                        <%= error %>
+                    </h2>
+                    <img id="imagen" src="/img/notfound.png" alt="No encontrado" class="img-fluid" style="margin: auto;">
+
+                </div>
+                <div class="card-back">
+                    <div class="Cinfo">
+                        <h2>
+                            Ingresa a la lista de Personajes y confirma el nombre del personaje que mas te guste.
+                        </h2>
+                    </div>
+
+                </div>
+                <% } else { %>
+                    <p>Busca un personaje para mostrar aquí.</p>
+                    <% } %>
+    </div>
 </div>

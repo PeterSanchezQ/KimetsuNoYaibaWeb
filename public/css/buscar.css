@@ -1,0 +1,133 @@
+/* ======== Fuente y colores base ======== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --color-bg: linear-gradient(160deg, #c65a5a, #b52525, #361313);
+    --color-acordeon: linear-gradient(240deg, #c65a5a, #b52525, #6a2222);
+    --color-acOpen: linear-gradient(240deg, #ee8989, #e63e3e, #9a2222);
+    --color-bgList: rgb(246, 230, 232);
+    --color-primary: #c62828;
+    --color-accent: #933f4c;
+    --color-muted: #aaa;
+    --color-texto: #ffffff;
+    --fondoImagenes: linear-gradient(0deg, rgb(69, 65, 10), rgb(80, 94, 11), rgb(134, 201, 58), rgb(219, 224, 198), rgb(62, 118, 9));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+}
+
+body {
+    background: var(--color-bg);
+    display: block;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    width: 100%;
+    color: var(--color-texto);
+}
+
+.formulario {
+    width: 100%;
+    margin: auto;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.form-control {
+    padding: 1rem;
+}
+
+/* ======================================= */
+/* ESTILOS DE LA TARJETA FLIP */
+/* ======================================= */
+
+.card {
+    position: relative;
+    display: inline-block;
+    width: 800px;
+    border-radius: 1rem;
+    background: var(--fondoImagenes);
+    box-shadow: 5px 5px 15px 10px rgba(58, 55, 55, 0.6);
+    aspect-ratio: 1/1;
+    perspective: 1000px;
+    transform-style: preserve-3d !important;
+    transition: transform 0.8s ease-in-out;
+}
+
+.card:hover {
+    transform: rotateY(180deg) !important;
+}
+
+#imagen {
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 90%;
+    height: auto;
+    max-height: 80%;
+    object-fit: contain;
+    object-position: center;
+    background-color: rgba(78, 59, 115, 0.4);
+    box-shadow: 0 0 10px 5px rgba(220, 215, 215, 0.6);
+}
+
+.card-front,
+.card-back {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    backface-visibility: hidden !important;
+    transition: transform 0.8s !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 1rem;
+}
+
+.card-front h2 {
+    color: white !important;
+    position: static;
+    padding-top: 1rem;
+    z-index: 10;
+}
+
+.card-back {
+    color: white !important;
+    justify-content: center;
+    padding: 2rem;
+    line-height: 1.8;
+    text-align: center;
+    transform: rotateY(180deg) !important;
+}
+
+.Cinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 95%;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(78, 59, 115, 0.5);
+    box-shadow: 0 0 10px 5px rgba(220, 215, 215, 0.6);
+}
+
+.card-back p {
+    color: inherit;
+    font-size: 1.1em;
+}
+

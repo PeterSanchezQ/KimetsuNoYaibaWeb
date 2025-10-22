@@ -1,5 +1,17 @@
+/* ======== Fuente y colores base ======== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
 :root {
+    --color-bg: linear-gradient(160deg, #c65a5a, #b52525, #361313);
+    --color-acordeon: linear-gradient(240deg, #c65a5a, #b52525, #6a2222);
+    --color-acOpen: linear-gradient(240deg, #ee8989, #e63e3e, #9a2222);
+    --color-bgList: rgb(246, 230, 232);
+    --color-primary: #c62828;
+    --color-accent: #933f4c;
+    --color-muted: #aaa;
+    --color-texto: #ffffff;
     --fondoImagenes: linear-gradient(0deg, rgb(69, 65, 10), rgb(80, 94, 11), rgb(134, 201, 58), rgb(219, 224, 198), rgb(62, 118, 9));
+
 }
 
 * {
@@ -10,23 +22,26 @@
 
 body,
 html {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  background: var(--color-bg);
 }
-body{
-    background-color: black;
+
+main {
+  background: var(--color-bg);
+  color: var(--color-texto);
 }
-nav {
-    margin-bottom: 2rem;
+.tjt,.bdtr{
+  background: var(--color-bg);
 }
+
+
 
 /* ====== TARJETA PRINCIPAL ====== */
 .tarjeta {
     min-width: 60vh;
     max-width: 800px;
+    margin: 2rem auto;
     background: var(--fondoImagenes);
     border-radius: 1rem;
     border: 5px solid rgb(90, 48, 48);
@@ -60,7 +75,6 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* Mantiene proporción */
     object-position: center;
 }
 
@@ -90,14 +104,15 @@ nav {
 
 /* ========= BOTONES PAGINACION ==============*/
 
-.control{
+.control {
     width: 60vh;
-    display:flex;
+    display: flex;
     padding: 1rem;
     margin: auto;
     gap: 1rem;
 }
-.control a{
+
+.control a {
     width: 100%;
     font-weight: bold;
 }

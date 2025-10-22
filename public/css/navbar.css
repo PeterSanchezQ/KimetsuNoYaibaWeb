@@ -1,5 +1,5 @@
 nav{
-    width: 100vw;
+    width: 100%;
     display: grid;
     grid-template-columns: 10rem 1fr;
     align-items: center;
