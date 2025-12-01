@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/about.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Demon Slayer</title>
 </head>
+
 <body>
     <%- include('navbar'); -%>
-    about
-    
-</body>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h1 class="about-title">⚔️ Sobre nuestro Cuerpo de Cazadores</h1>
+
+                <div class="mission-statement">
+                    <h2 class="sub-title">Nuestra Misión: Honrar a los Cazadores de Demonios</h2>
+                    <p>¡Bienvenidos, espadachines y amantes de Kimetsu no Yaiba!</p>
+                    <p><strong>Demon Slayer</strong> nació de la pasión por la épica historia de Tanjiro
+                        Kamado y su inquebrantable búsqueda para restaurar la humanidad de su hermana. Nuestro objetivo
+                        es ser el recurso definitivo para la comunidad, ofreciendo la información más precisa y
+                        detallada sobre el universo de Demon Slayer.</p>
+                </div>
+
+                <div class="api-feature">
+                    <h2 class="sub-title">🌟 ¿Qué nos hace diferentes? El Poder de la API</h2>
+                    <p>A diferencia de otros sitios, todo el contenido clave que ves aquí (como las biografías de los
+                        Pilares, los detalles de las Posturas de Respiración y los datos de los Doce Kizuki) se extrae
+                        directamente en tiempo real de la <strong>Demon Slayer API</strong>.</p>
+
+                    <ul class="feature-list">
+                        <li><strong class="highlight">Explorar Personajes:</strong> Conoce a fondo a tus héroes y
+                            villanos favoritos.</li>
+                        <li><strong class="highlight">Dominar los Estilos de Respiración:</strong> Sumérgete en los
+                            detalles técnicos y el origen de cada técnica.</li>
+                        <li><strong class="highlight">Contenido Dinámico:</strong> La API nos permite presentar la
+                            información de forma moderna y estructurada.</li>
+                    </ul>
+                </div>
+
+                <div class="call-to-action">
+                    <h2 class="sub-title">🛡️ Para Fans, Por Fans</h2>
+                    <p>Somos desarrolladores y fans dedicados que buscamos celebrar la maestría de Koyoharu Gotouge. Si
+                        estás buscando curiosidades, estadísticas o simplemente quieres repasar la historia antes de la
+                        próxima temporada, estás en el lugar correcto.</p>
+                    <p class="final-message">¡Gracias por unirte al **Cuerpo de Cazadores de Demonios** de nuestra
+                        comunidad!</p>
+                </div>
+
+                <div class="api-stat">
+                    <p>✨ **Estado de la Base de Datos:**</p>
+                    <p>Actualmente, nuestra base de datos rastrea a más de <span class="stat-number">666</span>
+                        Cazadores y Demonios. (Dato traído con la API)</p>
+                </div>
+
+            </div>
+        </section> <%- include('footer'); -%>
+
 </html>

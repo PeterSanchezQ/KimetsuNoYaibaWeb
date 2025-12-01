@@ -1,0 +1,141 @@
+/* ======== Fuente y colores base ======== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --color-bg: linear-gradient(160deg, #c65a5a, #b52525, #361313);
+    --color-acordeon: linear-gradient(240deg, #c65a5a, #b52525, #6a2222);
+    --color-acOpen: linear-gradient(240deg, #ee8989, #e63e3e, #9a2222);
+    --color-bgList: rgb(246, 230, 232);
+    --color-primary: #c62828;
+    --color-accent: #933f4c;
+    --color-muted: #aaa;
+    --color-texto: #ffffff;
+    --fondoImagenes: linear-gradient(0deg, rgb(69, 65, 10), rgb(80, 94, 11), rgb(134, 201, 58), rgb(219, 224, 198), rgb(62, 118, 9));
+    --color-secondary-bg: rgba(45, 10, 10, 0.9);
+    /* Fondo del contenedor principal */
+    --color-heading: #ffeb3b;
+    /* Amarillo/Dorado para títulos clave */
+    --color-feature-highlight: #4CAF50;
+    /* Verde para destacar puntos de la lista */
+    --color-border: #ee8989;
+    /* Borde suave */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+}
+
+body {
+    background: var(--color-bg);
+    display: block;
+    color: var(--color-texto);
+}
+
+/* -------------------------------------- */
+/* SECCIÓN ACERCA DE (ABOUT) */
+/* -------------------------------------- */
+
+.about-section {
+    padding: 40px 20px;
+    max-width: 900px;
+    width: 95%;
+    background-color: var(--color-secondary-bg);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--color-primary);
+    margin: 20px auto;
+}
+
+.container {
+    padding: 0 10px;
+}
+
+/* Títulos y Subtítulos */
+.about-title {
+    font-size: 2.4em;
+    font-weight: 600;
+    color: var(--color-heading);
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 5px var(--color-primary);
+}
+
+.sub-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--color-primary);
+    border-left: 4px solid var(--color-heading);
+    padding-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Párrafos y Contenido General */
+.mission-statement p,
+.api-feature p,
+.call-to-action p {
+    margin-bottom: 15px;
+    color: var(--color-texto);
+}
+
+strong {
+    color: var(--color-heading);
+}
+
+/* Listas de Características de la API */
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.feature-list li {
+    background: #361313;
+    /* Usamos un color oscuro de tu gradiente */
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border-left: 5px solid var(--color-feature-highlight);
+    transition: background 0.3s;
+}
+
+.feature-list li:hover {
+    background: #4a1919;
+}
+
+.highlight {
+    color: var(--color-heading);
+    font-weight: 600;
+}
+
+/* Mensaje Final y Estadísticas (CTA) */
+.final-message {
+    font-size: 1.1em;
+    font-style: italic;
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background: linear-gradient(90deg, #361313, #b525251a, #361313);
+    border-radius: 8px;
+    border: 1px dashed var(--color-muted);
+}
+
+.api-stat {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: var(--color-accent);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.stat-number {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--color-heading);
+    /* Destacamos el número de la API */
+}
