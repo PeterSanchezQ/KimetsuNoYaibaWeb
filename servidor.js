@@ -22,6 +22,13 @@ app.set('view cache', false);
 app.use('/', routes);
 
 // Servidor
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+//app.listen(PORT, () => {
+  //  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+//});
+const PORT = process.env.PORT || 3000;
+
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => console.log(`Running on ${PORT}`));
+}
+
+module.exports = app;
